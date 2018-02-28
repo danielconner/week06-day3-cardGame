@@ -19,10 +19,14 @@ public class Deck {
     }
 
     public void populateDeck(Card card){
-        for (each : SuitType.values()){
-            for (each : ValueType.values())
+        for (SuitType suit: SuitType.values()){
+            for (ValueType value: ValueType.values())
                 this.deck.add(card);
         }
+    }
+
+    public Card getCardFromIndex(int index){
+        return this.deck.get(index);
     }
 
 

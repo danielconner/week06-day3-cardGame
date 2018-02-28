@@ -32,4 +32,10 @@ public class DeckTest {
         deck.populateDeck(card);
         assertEquals(52, deck.numberOfCards());
     }
+
+    @Test
+    public void canGetCardFromDeck(){
+        deck.populateDeck(card);
+        assertEquals("SuitType.HEARTS, ValueType.ACE" , deck.getCardFromIndex(0));
+    }
 }
