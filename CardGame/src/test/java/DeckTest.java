@@ -36,6 +36,8 @@ public class DeckTest {
     @Test
     public void canGetCardFromDeck(){
         deck.populateDeck(card);
-        assertEquals("SuitType.HEARTS, ValueType.ACE" , deck.getCardFromIndex(0));
+        Card card1 = deck.getCardFromIndex(0);
+        assertEquals(SuitType.HEARTS, card1.getSuit());
+        assertEquals(1, card1.getValueFromEnum());
     }
 }

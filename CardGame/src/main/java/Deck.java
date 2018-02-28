@@ -26,7 +26,11 @@ public class Deck {
     }
 
     public Card getCardFromIndex(int index){
-        return this.deck.get(index);
+        Card card = this.deck.get(index);
+        return card.getSuit();
+        return card.getValueFromEnum();
+
+
     }
 
 
