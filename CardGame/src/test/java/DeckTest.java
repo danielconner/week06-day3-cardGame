@@ -30,21 +30,21 @@ public class DeckTest {
 
     @Test
     public void canPopulateDeck(){
-        deck.populateDeck(card);
+        deck.populateDeck();
         assertEquals(52, deck.numberOfCards());
     }
 
     @Test
     public void canGetCardFromDeck(){
-        deck.populateDeck(card);
+        deck.populateDeck();
         Card card1 = deck.getCardFromIndex(2);
-        assertEquals(SuitType.DIAMONDS, card1.getSuit());
-        assertEquals(5, card1.getValueFromEnum());
+        assertEquals(SuitType.HEARTS, card1.getSuit());
+        assertEquals(3, card1.getValueFromEnum());
     }
 
     @Test
     public void deal(){
-        deck.populateDeck(card);
+        deck.populateDeck();
         deck.shufflePack();
         deck.deal(0);
         assertEquals(51, deck.numberOfCards());

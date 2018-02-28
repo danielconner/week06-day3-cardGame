@@ -19,10 +19,10 @@ public class Deck {
         this.deck.add(card);
     }
 
-    public void populateDeck(Card card){
+    public void populateDeck(){
         for (SuitType suit: SuitType.values()){
             for (ValueType value: ValueType.values())
-                this.deck.add(card);
+                this.deck.add(new Card(suit, value));
         }
     }
 
