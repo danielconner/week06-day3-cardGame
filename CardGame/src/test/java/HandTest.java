@@ -29,7 +29,7 @@ public class HandTest {
         deck.populateDeck();
         Card card1 = deck.deal(0);
         hand.addCard(card1);
-        assertEquals(1, hand.cardHasValue(card1));
+        assertEquals(5, hand.cardHasValue(card1));
     }
 
 
