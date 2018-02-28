@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class DeckTest {
 
@@ -36,8 +37,18 @@ public class DeckTest {
     @Test
     public void canGetCardFromDeck(){
         deck.populateDeck(card);
-        Card card1 = deck.getCardFromIndex(0);
-        assertEquals(SuitType.HEARTS, card1.getSuit());
-        assertEquals(1, card1.getValueFromEnum());
+        Card card1 = deck.getCardFromIndex(2);
+        assertEquals(SuitType.DIAMONDS, card1.getSuit());
+        assertEquals(5, card1.getValueFromEnum());
     }
+
+    @Test
+    public void deal(){
+        deck.populateDeck(card);
+        deck.shufflePack();
+        deck.deal(0);
+        assertEquals(51, deck.numberOfCards());
+    }
+
+
 }

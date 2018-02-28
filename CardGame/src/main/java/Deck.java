@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
     private ArrayList<Card> deck;
@@ -27,11 +28,19 @@ public class Deck {
 
     public Card getCardFromIndex(int index){
         Card card = this.deck.get(index);
-        return card.getSuit();
-        return card.getValueFromEnum();
-
-
+        return card;
     }
+
+    public void shufflePack(){
+        Collections.shuffle(this.deck);
+    }
+
+    public Card deal(int index){
+        Card card1 = this.deck.remove(index);
+        return card1;
+    }
+
+
 
 
 
